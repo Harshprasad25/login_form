@@ -27,8 +27,8 @@ if (isset($_POST['add'])) {
         exit;
     }
   
-   $query = "INSERT INTO login (name, email, mobile, gender, dob, age, pwd, role, status)
-           VALUES ('$name', '$email', '$mobile', '$gender', '$dob', '$age', '$password', '$role', 'pending')";
+   $query = "INSERT INTO login (name, email, mobile, gender, dob, age, pwd,cpwd, role, status)
+           VALUES ('$name', '$email', '$mobile', '$gender', '$dob', '$age', '$pwd','$cpwd', '$role', 'pending')";
 
     $result = mysqli_query($conn, $query);
 
