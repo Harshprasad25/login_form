@@ -5,7 +5,7 @@ if (isset($_GET['id'])) {
     $id = intval($_GET['id']);
     $query = "UPDATE login SET status='rejected' WHERE id=$id";
     if (mysqli_query($conn, $query)) {
-        header("Location: admin_view.php"); 
+        header("Location: admin.php"); 
         exit;
     } else {
         echo "Error: " . mysqli_error($conn);
